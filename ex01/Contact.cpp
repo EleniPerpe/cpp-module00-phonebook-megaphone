@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:53:47 by eperperi          #+#    #+#             */
-/*   Updated: 2024/10/30 15:24:34 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:50:09 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 void Contact::fill_contact()
 {
+	std::cout << std::endl;
 	first_name = empty_check("Please enter your first name : ", false);
 	last_name = empty_check("Please enter your last name :", false);
 	nick_name = empty_check("Please enter your nickname :", false);
@@ -28,7 +29,7 @@ std::string Contact::empty_check(std::string field, bool number)
 	std::string line;
 	bool flag = true;
 
-	std::cout << field << " ";
+	std::cout << BWHITE << field << " " << RS;
 	std::getline(std::cin, line);
 	if (std::cin.fail())
 		exit (1);
@@ -38,7 +39,7 @@ std::string Contact::empty_check(std::string field, bool number)
 			i++;
 		if (i == line.length())
 		{
-			std::cout << field << std::endl;
+			std::cout << BWHITE << field << RS << " ";
 			std::getline(std::cin, line);
 			flag = true;
 		}
@@ -82,7 +83,7 @@ std::string Contact::number_check(std::string line, std::string field)
 
 void Contact::printname()
 {
-	std::cout << first_name << " " << last_name << std::endl << std::endl;
+	std::cout << BLUE << first_name << " " << last_name << RS << std::endl << std::endl;
 }
 
 void Contact::print_search()
@@ -98,21 +99,21 @@ void Contact::check_length(std::string string)
 	{	
 		for (int x = 10 - string.length(); x > 0; x--)
 			std::cout << " ";
-		std::cout << string << "|";
+		std::cout << ORANGE << string << RS << "|";
 	}
 	else
 	{
 		std::string temp = string.substr(0, 10);
-		std::cout << temp << "|";
+		std::cout << ORANGE << temp << RS << "|";
 	}
 	
 }
 
 void Contact::print_selected()
 {
-	std::cout << "First name : " << first_name << std::endl;
-	std::cout << "Last name : " << last_name << std::endl;
-	std::cout << "Nickname : " << nick_name << std::endl;
-	std::cout << "Phone number : " << phone_number << std::endl;
-	std::cout << "Darkest secret : " << dark_secret << std::endl;
+	std::cout << BWHITE << "First name : " << RS << first_name << std::endl;
+	std::cout << BWHITE << "Last name : " << RS << last_name << std::endl;
+	std::cout << BWHITE << "Nickname : " << RS << nick_name << std::endl;
+	std::cout << BWHITE << "Phone number : " << RS << phone_number << std::endl;
+	std::cout << BWHITE << "Darkest secret : " << RS << dark_secret << std::endl;
 }

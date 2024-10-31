@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:44:02 by eperperi          #+#    #+#             */
-/*   Updated: 2024/10/30 16:03:00 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:12:45 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ class Phonebook
 {
 	private:
 		Contact contacts[8];
+		
+		bool check_digit(std::string input);
 
 	public:
 		void add_contact(int *count, int *index);
