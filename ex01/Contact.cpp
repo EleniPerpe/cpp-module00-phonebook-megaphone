@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:53:47 by eperperi          #+#    #+#             */
-/*   Updated: 2024/10/31 10:50:09 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:38:33 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,8 +103,8 @@ void Contact::check_length(std::string string)
 	}
 	else
 	{
-		std::string temp = string.substr(0, 10);
-		std::cout << ORANGE << temp << RS << "|";
+		std::string temp = string.substr(0, 9);
+		std::cout << ORANGE << temp << "." << RS "|";
 	}
 	
 }
