@@ -1,0 +1,1 @@
+This repository contains solutions for Exercise 00 (Megaphone) and Exercise 01 (PhoneBook) from the C++ Module 00. These exercises introduce basic C++ concepts such as classes, streams, and input handling.
